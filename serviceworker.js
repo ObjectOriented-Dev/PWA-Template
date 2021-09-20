@@ -1,17 +1,18 @@
 const cacheName = 'pwa_template-v1';
 const cacheContent = [
-    '/PWA-Template/index.html',
-    '/PWA-Template/icon.png',
-    '/PWA-Template/public/app.js',
-    '/PWA-Template/manifest.json',
-    '/PWA-Template/README.md'
+    '/index.html',
+    '/icon.png',
+    '/public/app.js',
+    '/manifest.json',
+    '/README.md'
 ];
 
 self.addEventListener("install", e => {
     console.log('[Service Worker] Install');
     e.waitUntil(async() => {
-        const cache = await caches.open(cacheName);
-        await cache.addAll(cacheContent);
+        caches.open(cacheName).then(function(cache){
+            cache.addAll(cacheContent);
+        }); 
     });
 });
 self.addEventListener("fetch", e =>{

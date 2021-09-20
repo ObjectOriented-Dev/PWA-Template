@@ -1,15 +1,24 @@
 {
     "name" : "PWA Demo",
     "short_name": "PWA Demo",
-    "icons": [{
+    "icons": [
+        {
         "src": "./icon.png",
         "sizes": "144x144",
         "type": "image/png",
-        "purpose": "any"
-    }],
+        "purpose": "maskable"
+        },
+        {
+            "src": "./icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#d68c45",
     "theme_color": "#0a0a0a",
+    "theme-color": "#173b27",
     "orientation": "portriat"
 }
