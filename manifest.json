@@ -15,10 +15,10 @@
             "purpose": "any"
         }
     ],
+    "theme-color": "#173b27",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#d68c45",
     "theme_color": "#0a0a0a",
-    "theme-color": "#173b27",
     "orientation": "portriat"
 }
