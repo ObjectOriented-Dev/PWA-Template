@@ -1,12 +1,12 @@
 const cacheName = 'pwa_template-v1';
 const cacheContent = [
     './index.html',
-    './icon.png',
+    './icons/icon.png',
+    './icons/icon-512.png',
     './public/app.js',
     './manifest.json',
     './README.md'
 ];
-
 
 self.addEventListener("install", e => {
     console.log('[Service Worker] Install');
@@ -17,6 +17,7 @@ self.addEventListener("install", e => {
     }
     e.waitUntil(cacheUp());
 });
+
 self.addEventListener("fetch", (e) => {
     e.respondWith((async () => {
       const r = await caches.match(e.request);
